@@ -468,7 +468,8 @@ installed in. It adds "Edit with PdfCraft"
 to the right-click menu of PDF files and "Create PDF with PdfCraft…" to the right-click menu of
 images (.png .jpg .jpeg .tif .tiff .gif .bmp .jp2 .j2k .jpx) in File Explorer (on Windows 11, under
 "Show more options"), without changing which app opens them by default. Unattended installs are for
-all users; for deployment without a desktop shortcut, run from an elevated terminal:
+all users unless you pass the per-user properties below (`ALLUSERS=2 MSIINSTALLPERUSER=1`); for
+deployment without a desktop shortcut, run from an elevated terminal:
 
 ```powershell
 msiexec /i "pdfcraft-<ver>-windows-x64.msi" /qn /norestart INSTALLDESKTOPSHORTCUT=0
